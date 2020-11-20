@@ -14,12 +14,12 @@ const App = () => {
 
   return (
     <>
-      <p data-testid="labelTitle">Lista de compras</p>
+      <p>Lista de compras</p>
       <button onClick={handleAddList}>Adicionar Item</button>
-      <form data-testid="formList" onSubmit={handleAddList}>
+      <form onSubmit={handleAddList}>
         <label htmlFor="list">Item: </label>
         <input id="list" value={newItem} onChange={event => setNewItem(event.target.value)} />
-        <ul data-testid="items">
+        <ul>
           {list.map(item => <li key={item}>{item}</li>)}
         </ul>
       </form>
