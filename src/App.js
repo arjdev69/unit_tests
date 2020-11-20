@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 
-// import { Container } from './styles';
-
 const App = () => {
 
   const [list, setLists] = useState([]);
@@ -15,14 +13,6 @@ const App = () => {
   return (
     <>
       <p>Lista de compras</p>
-      <button onClick={handleAddList}>Adicionar Item</button>
-      <form onSubmit={handleAddList}>
-        <label htmlFor="list">Item: </label>
-        <input id="list" value={newItem} onChange={event => setNewItem(event.target.value)} />
-        <ul>
-          {list.map((item, i) => <li key={i}>{item}</li>)}
-        </ul>
-      </form>
     </>
   );
 }
