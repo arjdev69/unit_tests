@@ -20,7 +20,7 @@ const App = () => {
         <label htmlFor="list">Item: </label>
         <input id="list" value={newItem} onChange={event => setNewItem(event.target.value)} />
         <ul>
-          {list.map(item => <li key={item}>{item}</li>)}
+          {list.map((item, i) => <li key={i}>{item}</li>)}
         </ul>
       </form>
     </>
